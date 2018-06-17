@@ -54,7 +54,7 @@ cat( "Pearson's skewness:" , 3*(as.numeric(mean(x, na.rm = TRUE)) - as.numeric(m
 library(leaps)
 library(Ecdat)
 
-model1 <- lm(wage2$wage ~ ., data = wage2)
+model1 <- lm(lwage ~. -wage, data = na.omit(wage2))
 step(model1, direction="both")
 summary(model1)
 plot(model1)
