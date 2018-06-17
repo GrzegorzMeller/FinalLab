@@ -53,6 +53,7 @@ cat( "Pearson's skewness:" , 3*(as.numeric(mean(x, na.rm = TRUE)) - as.numeric(m
 #ex 3
 library(leaps)
 library(Ecdat)
+library(car)
 
 model1 <- lm(lwage ~. -wage, data = na.omit(wage2))
 step(model1, direction="both")
@@ -60,6 +61,5 @@ summary(model1)
 plot(model1)
 AIC(model1)
 
-#biblioteka od sprawdzania zalozen liniowosci
-library(gvlma)
-gvlma(model1)
+scatterplot(wage2$wage, wage2$feduc)
+cor(wage2$wage, wage2$feduc, method="pearson", use="complete.obs")
