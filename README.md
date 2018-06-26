@@ -13,7 +13,7 @@ By using forward (adds variables as long as it improves the model) or backward (
 # how to deal with multicollinearity 
 
 1.	Remove highly correlated predictors from the model.  If you have two or more factors with a high VIF, remove one from the model. Because they supply redundant information, removing one of the correlated factors usually doesn't drastically reduce the R-squared.  Consider using stepwise regression, best subsets regression, or specialized knowledge of the data set to remove these variables
-how to deal with missing data 
+# how to deal with missing data 
 Deleting missing data and replace them with average- pretty obvious. Minusy takie, że może to wypaczyć nasze wyniki, szczególnie jak jest sporo tych brakujących danych.
 Another idea can be avoiding observations where data is missing.
 If you miss data in one variable, delete this data also from related variable. 
